@@ -1,0 +1,31 @@
+﻿@model kutuphane.Models.TBLKITAP
+@{
+    ViewBag.Title = "KitapEkle";
+    Layout = "~/Views/Shared/_KitapLayout.cshtml";
+}
+
+<h2>KitapEkle</h2>
+<br />
+
+<form class="form-group" method="post">
+    <div style="margin-bottom:15px">
+        @Html.LabelFor(x => x.AD)
+        @Html.TextBoxFor(x => x.AD, new {@class = "form-control"} )
+    </div>
+
+    <div style="margin-bottom:15px">
+        @Html.LabelFor(x => x.YAZAR)
+        @Html.TextBoxFor(x => x.YAZAR, new { @class = "form-control" })
+    </div>
+
+    <div style="margin-bottom:15px">
+        @Html.LabelFor(x => x.SAYFA)
+        @Html.TextBoxFor(x => x.SAYFA, new { @class = "form-control" })
+    </div>
+
+    <div style="margin-bottom:15px">
+        @Html.LabelFor(x => x.KATEGORI)
+        @Html.TextBoxFor(x => x.KATEGORI, new { @class = "form-control" })
+    </div>
+    <button class="btn btn-info">Kaydet</button>
+</form>
